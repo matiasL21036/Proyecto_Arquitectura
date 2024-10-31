@@ -20,6 +20,12 @@ def home():
 def api():
     return jsonify({"message": "¡Hola desde la API Flask!"})
 
+# Ruta de ejemplo con datos ficticios
+@app.route('/api/data', methods=['GET'])
+def get_data():
+    return jsonify({"data": "Este es un dato de ejemplo "})
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
